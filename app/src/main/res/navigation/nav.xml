@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/classicFragment"
+    android:id="@+id/nav">
+    <fragment
+        android:id="@+id/popFragment"
+        android:name="com.ChristopherVillatte.exomusicapp.views.pop.PopFragment"
+        android:label="PopFragment"
+        tools:layout="@layout/fragment_track_list">
+        <action
+            android:id="@+id/action_popFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rockFragment"
+        android:name="com.ChristopherVillatte.exomusicapp.views.rock.RockFragment"
+        android:label="RockFragment"
+        tools:layout="@layout/fragment_track_list">
+        <action
+            android:id="@+id/action_rockFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/classicFragment"
+        android:name="com.ChristopherVillatte.exomusicapp.views.classic.ClassicFragment"
+        android:label="classicFragment"
+        tools:layout="@layout/fragment_track_list">
+        <action
+            android:id="@+id/action_classicFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.ChristopherVillatte.exomusicapp.views.PlayerFragment"
+        android:label="fragment_exoplayer"
+        tools:layout="@layout/fragment_exoplayer" />
+</navigation>
